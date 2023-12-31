@@ -8,6 +8,10 @@ sys.path.append("..")
 from segment_anything import sam_model_registry, SamPredictor
 import matplotlib.pyplot as plt
 
+# Note: If you don't have sam_vit_h_4b8939.pth (the ViT-H SAM model checkpoint) downloaded yet, run this section. Use subprocess to run the wget command
+# import subprocess
+# subprocess.run(["wget", "-P", "models", "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth"])
+
 def yolov8_detection(model, image_path):
 
     image = cv2.imread(image_path)
